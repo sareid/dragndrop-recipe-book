@@ -1,0 +1,16 @@
+<div class="small-8 columns">
+  <h3>{{model.recipe.name}}</h3>
+  {{model.recipe.description}}
+  <div class="row">
+    <div class="small-12 columns">  <br><p>Ingredients in this recipe:</p></div>
+    <div class="small-12 columns recipe-ingredients">
+      {{#each model.recipe.ingredients as |ingredient|}}
+        <p class="button tiny round">{{ingredient.name}}</p>
+      {{/each}}
+    </div>
+  </div>
+  <br>
+  {{ingredient-list model=model.ingredients}}
+</div>
+
+{{outlet}}

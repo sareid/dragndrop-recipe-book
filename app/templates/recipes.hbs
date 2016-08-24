@@ -1,0 +1,11 @@
+<div class="small-4 columns">
+  {{#link-to 'recipes'}}<h3>Recipes</h3>{{/link-to}}
+  <ul class="side-nav">
+    {{#each model as |recipe|}}
+      <li>
+        {{#link-to 'recipes.recipe' recipe.id}}{{recipe.name}}{{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+{{outlet}}

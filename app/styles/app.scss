@@ -1,0 +1,15 @@
+@import "settings";
+
+@import "foundation";
+
+.recipe-ingredients {
+  height: 20vh;
+  padding: 0.4em;
+  border-style: dashed;
+  border-color: #9C9C9C
+}
+
+.recipe-list {
+  height: 30vh;
+  margin-top: 0.4em;
+}
