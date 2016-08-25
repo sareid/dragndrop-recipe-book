@@ -1,12 +1,15 @@
-<div class="small-4 columns">
+<div class="small-3 columns">
   {{#link-to 'recipes'}}<h3>Recipes</h3>{{/link-to}}
-  {{#link-to 'recipes.new'}}<p>+ Add recipe</p>{{/link-to}}
-  <ul class="side-nav">
-    {{#each model as |recipe|}}
-      <li>
-        {{#link-to 'recipes.recipe' recipe.id}}{{recipe.name}}{{/link-to}}
-      </li>
-    {{/each}}
-  </ul>
+  {{#link-to 'recipes.new'}}<span class="button tiny radius">+ Add recipe</span>{{/link-to}}
+  <div class="sidebar">
+    <ul class="side-nav">
+      {{#each model as |recipe|}}
+        <li>
+          {{#link-to 'recipes.recipe' recipe.id}}{{recipe.name}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
+<div class="small-1 columns"></div>
 {{outlet}}

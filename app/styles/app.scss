@@ -1,23 +1,45 @@
+@import "variables";
 @import "settings";
-
 @import "foundation";
 
-$default-margin : 20px;
-$gray-light     : #e1e1e1;
-$gray-medium    : #aaa;
-$green          : #2ecc71;
-$white          : #fff;
-$black          : #111;
+
+
+body {
+  background-color: $paper;
+}
+
+h1 {
+  font-family: 'Ovo', serif;
+  font-size: 4em;
+  color: $gold;
+  padding-top: 0.1em;
+}
+
+h3 {
+  font-family: 'Ovo', serif;
+  color: $gold;
+}
+
+p {
+  color: $black;
+  &.secondary {
+    font-style: italic;
+  }
+}
+
+a {
+  color: $silk;
+}
 
 .draggableDropzone {
   height: 20vh;
   display: block;
   border: 3px dashed $gray-medium;
-  padding: $default-margin / 2;
+  // padding: 1em;
   width: 100%;
-  min-height: $default-margin * 2.5;
+  // min-height: $default-margin * 2.5;
   color: $black;
-  margin-bottom: $default-margin / 2;
+  // margin-bottom: $default-margin / 2;
   &.activated {
     border-color: $green;
   }
@@ -40,4 +62,33 @@ $black          : #111;
     background-color: $gray-medium;
   }
 
+}
+
+.sidebar {
+  height: 60vh;
+  overflow-y: scroll;
+  p {
+    font-family: 'Muli', serif;
+  }
+}
+
+.heading-text {
+  height: 15vh;
+  background-color: $black;
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.recipe-info {
+  height: 20vh;
+}
+
+.recipe-ing {
+  height: 20vh;
+}
+
+.ingredient-list {
+  height: 20vh;
+  overflow-y: scroll;
 }

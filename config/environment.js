@@ -41,7 +41,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.API_HOST: = 'https://recipe-book-api.herokuapp.com/';
   }
 
   return ENV;

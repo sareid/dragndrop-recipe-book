@@ -1,15 +1,20 @@
 <div class="small-8 columns">
-  <h3>{{model.recipe.name}}</h3>
-  {{model.recipe.description}}
-  <div class="row">
-    <div class="small-12 columns"> <br><p>Ingredients in this recipe:</p></div>
-    <div class="small-12 columns">
-      {{#draggable-dropzone dropped="addIngredient" recipeId=model.recipe.id}}
-        {{#each model.recipe.ingredients as |ingredient|}}
-          <span>{{ingredient.name}} <a href="#" {{action 'removeIngredient' ingredient.id model.recipe.id}}>x</a></span>
-        {{/each}}
-      {{/draggable-dropzone}}
-    </div>
+  <div class="row recipe-info">
+    <h3>{{model.recipe.name}}</h3>
+    <p>{{model.recipe.description}}</p>
+  </div>
+  <div class="row recipe-ing">
+    {{#draggable-dropzone dropped="addIngredient" recipeId=model.recipe.id}}
+
+      <div class="small-12 columns"> <br><p class="secondary">Ingredients (drag from below to add more)</p></div>
+      <div class="small-12 columns">
+
+          {{#each model.recipe.ingredients as |ingredient|}}
+            <span>{{ingredient.name}} <a href="#" {{action 'removeIngredient' ingredient.id model.recipe.id}}>x </a></span>
+          {{/each}}
+
+      </div>
+    {{/draggable-dropzone}}
   </div>
   <br>
   {{ingredient-list model=model.ingredients}}
