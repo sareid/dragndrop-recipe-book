@@ -1,16 +1,17 @@
 <div class="row">
-  <div class="small-6 columns">
-    <h4>All ingredients:</h4>
-  </div>
-  <div class="small-6 columns">
-    {{ingredient-maker model=model}}
+  <div class="small-6 columns end">
+    <h3>All ingredients</h3>
   </div>
 </div>
 <div class="row">
+  {{ingredient-maker model=model}}
+</div>
+<div class="row ingredient-list">
   {{#each model as |ingredient|}}
     {{#draggable-item content=ingredient.id}}
       <span>{{ingredient.name}}</span>
     {{/draggable-item}}
   {{/each}}
 </div>
+
 {{yield}}
