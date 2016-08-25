@@ -9,19 +9,19 @@ export default Ember.Component.extend({
 
   dragLeave(event) {
     event.preventDefault();
-    set(this, 'dragClass', 'deactivated')
+    set(this, 'dragClass', 'deactivated');
   },
 
   dragOver(event) {
     event.preventDefault();
-    set(this, 'dragClass', 'activated')
+    set(this, 'dragClass', 'activated');
   },
 
   drop(event) {
     var data = event.dataTransfer.getData('text/data');
     this.sendAction('dropped', data, this.get('recipeId'));
 
-    set(this, 'dragClass','deactivated')
+    set(this, 'dragClass','deactivated');
   }
 
 
