@@ -1,0 +1,19 @@
+<div class="small-8 columns">
+  <br>
+  <form {{action "createRecipe" on="submit"}}>
+    <div class="row">
+      <div class="small-6 columns">
+        <label>Create a new recipe
+          {{input valueBinding="model.name" placeholder="Name"}}
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-10 columns">
+        {{textarea valueBinding="model.description" placeholder="Description" rows="8"}}
+        <button type="submit" class="button small radius">Create</button>
+      </div>
+    </div>
+  </form>
+</div>
+{{outlet}}

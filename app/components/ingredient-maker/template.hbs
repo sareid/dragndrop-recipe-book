@@ -1,0 +1,11 @@
+<form>
+    <div class="row collapse" >
+      <div class="small-8 columns">
+        {{input value=ingredientName placeholder="Add new ingredient"}}
+      </div>
+      <div class="small-4 columns">
+        <button class="button postfix" {{action "createIngredient" ingredientName}}>Create</button>
+      </div>
+    </div>
+</form>
+{{yield}}
