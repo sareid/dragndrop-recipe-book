@@ -1,15 +1,18 @@
 <div class="small-3 columns">
   {{#link-to 'recipes'}}<h3>Recipes</h3>{{/link-to}}
-  {{#link-to 'recipes.new'}}<span class="button tiny radius">+ Add recipe</span>{{/link-to}}
+  {{#link-to 'recipes.new'}}<p class="secondary">+ Add recipe</p>{{/link-to}}
   <div class="sidebar">
     <ul class="side-nav">
       {{#each model as |recipe|}}
         <li>
-          {{#link-to 'recipes.recipe' recipe.id}}{{recipe.name}}{{/link-to}}
+          {{#link-to 'recipes.recipe' recipe.id}}<span>{{recipe.name}}</span>{{/link-to}}
         </li>
       {{/each}}
     </ul>
   </div>
 </div>
 <div class="small-1 columns"></div>
+{{#if welcome}}
+  {{welcome-panel}}
+{{/if}}
 {{outlet}}

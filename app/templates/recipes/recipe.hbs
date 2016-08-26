@@ -6,7 +6,7 @@
   <div class="row recipe-ing">
     {{#draggable-dropzone dropped="addIngredient" recipeId=model.recipe.id}}
 
-      <div class="small-12 columns"> <br><p class="secondary">Ingredients (drag from below to add more)</p></div>
+      <p class="secondary">Ingredients (drag from below to add more)</p>
       <div class="small-12 columns">
 
           {{#each model.recipe.ingredients as |ingredient|}}
